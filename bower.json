@@ -1,0 +1,25 @@
+{
+  "name": "bonsai",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "Sebastián Ramírez"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7",
+    "angular-material": "^1.0.9"
+  },
+  "resolutions": {
+    "angular": "^1.5.7"
+  }
+}
