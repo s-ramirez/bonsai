@@ -1,5 +1,5 @@
 .login-card {
-  @media screen and (min-width: @tablet) {
+  @media screen and (min-width: $tablet) {
     max-width: 400px;
   }
 
@@ -9,7 +9,7 @@
     h1 {
       color: white;
       text-align: center;
-      font-family: @logo-font;
+      font-family: $logo-font;
     }
   }
 }
