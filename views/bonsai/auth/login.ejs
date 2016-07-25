@@ -5,20 +5,24 @@
     </header>
     <md-card-content>
       <form ng-submit="$ctrl.login">
-        <md-input-container class="md-block">
+        <md-input-container class="md-icon-float md-block">
           <label>Email</label>
+          <md-icon aria-label="Email" class="material-icons">email</md-icon>
           <input ng-model="$ctrl.email" name="email" type="email">
         </md-input-container>
-        <md-input-container class="md-block">
+        <md-input-container class="md-icon-float md-block">
           <label>Password</label>
+          <md-icon aria-label="Password" class="material-icons">lock</md-icon>
           <input ng-model="$ctrl.password" name="password" type="password">
         </md-input-container>
       </form>
     </md-card-content>
-    <md-card-actions layout="row" layout-align="center center">
-      <md-button class="md-primary" aria-label="Login">
+    <div class="login-button-container">
+      <md-button class="md-primary md-raised" aria-label="Login">
         Login
       </md-button>
-    </md-card-actions>
+      <a href="#" class="button-forgot">Forgot password?</a>
+    </div>
+    <span class="version">v0.0.1</span>
   </md-card>
 </div>
