@@ -6,7 +6,9 @@
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
+    <!-- Removing angular's # in urls -->
+    <base href="/">
+    
     <!--
         Stylesheets and Preprocessors
         ==============================
@@ -38,7 +40,7 @@
     <!-- GOOGLE FONTS END-->
   </head>
 
-  <body layout="row" ng-cloak>
+  <body layout="row" ng-cloak ng-view>
     <%- body %>
 
 
@@ -65,7 +67,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+
     <!--TEMPLATES END-->
 
 
@@ -102,9 +104,11 @@
     <script src="/bower_components/angular-material/angular-material.js"></script>
     <script src="/bonsai/bonsai.module.js"></script>
     <script src="/bonsai/common/auth.service.js"></script>
+    <script src="/bonsai/common/toast.service.js"></script>
     <script src="/bonsai/layout/layout.controller.js"></script>
     <script src="/bonsai/login/login.controller.js"></script>
     <script src="/bonsai/bonsai.config.js"></script>
+    <script src="/bonsai/bonsai.routes.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

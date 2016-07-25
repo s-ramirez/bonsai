@@ -4,21 +4,21 @@
       <h1>Bonsai</h1>
     </header>
     <md-card-content>
-      <form ng-submit="$ctrl.login">
+      <form name="loginForm">
         <md-input-container class="md-icon-float md-block">
           <label>Email</label>
           <md-icon aria-label="Email" class="material-icons">email</md-icon>
-          <input ng-model="$ctrl.email" name="email" type="email">
+          <input ng-model="$ctrl.email" name="email" type="email" required>
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
           <label>Password</label>
           <md-icon aria-label="Password" class="material-icons">lock</md-icon>
-          <input ng-model="$ctrl.password" name="password" type="password">
+          <input ng-model="$ctrl.password" name="password" type="password" required>
         </md-input-container>
       </form>
     </md-card-content>
     <div class="login-button-container">
-      <md-button class="md-primary md-raised" aria-label="Login">
+      <md-button class="md-primary md-raised" aria-label="Login" ng-click="$ctrl.login()" ng-disabled="!$ctrl.email || !$ctrl.password">
         Login
       </md-button>
       <a href="#" class="button-forgot">Forgot password?</a>
