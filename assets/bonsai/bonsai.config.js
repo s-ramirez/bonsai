@@ -5,6 +5,8 @@
     .module('bonsai')
     .config(configBlock);
 
+  configBlock.$inject = ['$mdThemingProvider', '$locationProvider'];
+
   function configBlock($mdThemingProvider, $locationProvider) {
     //Generated using http://mcg.mbitson.com/#/
     $mdThemingProvider.definePalette('bonsaiPrimary', {
@@ -29,5 +31,7 @@
     $mdThemingProvider.theme('default')
       .primaryPalette('bonsaiPrimary')
       .accentPalette('cyan');
+
+    $locationProvider.html5Mode(true);
   }
 })();
