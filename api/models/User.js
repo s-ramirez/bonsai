@@ -18,6 +18,7 @@ module.exports = {
       return obj;
     }
   },
+  
   beforeCreate: function(user, cb) {
     bcrypt.genSalt(10, function(err, salt){
       bcrypt.hash(user.password, salt, function(err, hash){
@@ -29,6 +30,18 @@ module.exports = {
           cb();
         }
       });
+    });
+  },
+
+  validPassword: function(password, user, cb) {
+    bcrypt.compare(password, user.password, function(err, match) {
+      if (err)
+        cb(err);
+      if (match) {
+        cb(null, true);
+      } else {
+        cb(err);
+      }
     });
   }
 };

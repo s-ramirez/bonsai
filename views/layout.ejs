@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="bonsai" ng-cloak>
+<html ng-app="bonsai">
   <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+    <title><%=typeof title == 'undefined' ? 'Bonsai' : title%></title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Removing angular's # in urls -->
     <base href="/">
-    
+
     <!--
         Stylesheets and Preprocessors
         ==============================
@@ -40,7 +40,7 @@
     <!-- GOOGLE FONTS END-->
   </head>
 
-  <body layout="row" ng-cloak ng-view>
+  <body ui-view layout="column">
     <%- body %>
 
 
@@ -67,7 +67,7 @@
     -->
 
     <!--TEMPLATES-->
-
+    
     <!--TEMPLATES END-->
 
 
@@ -98,13 +98,16 @@
     <script src="/app/dependencies/sails.io.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-aria/angular-aria.js"></script>
-    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.js"></script>
     <script src="/bower_components/angular-messages/angular-messages.js"></script>
     <script src="/bower_components/angular-material/angular-material.js"></script>
     <script src="/bonsai/bonsai.module.js"></script>
+    <script src="/bonsai/common/token.interceptor.js"></script>
     <script src="/bonsai/common/auth.service.js"></script>
+    <script src="/bonsai/common/storage.service.js"></script>
     <script src="/bonsai/common/toast.service.js"></script>
+    <script src="/bonsai/dashboard/dashboard.controller.js"></script>
     <script src="/bonsai/layout/layout.controller.js"></script>
     <script src="/bonsai/login/login.controller.js"></script>
     <script src="/bonsai/bonsai.config.js"></script>

@@ -37,7 +37,7 @@ var jsFilesToInject = [
   // Bower components
   'bower_components/angular/angular.js',
   'bower_components/angular-aria/angular-aria.js',
-  'bower_components/angular-route/angular-route.js',
+  'bower_components/angular-ui-router/release/angular-ui-router.js',
   'bower_components/angular-animate/angular-animate.js',
   'bower_components/angular-messages/angular-messages.js',
   'bower_components/angular-material/angular-material.js',
@@ -48,6 +48,7 @@ var jsFilesToInject = [
 
   // Inject CMS js files in order
   'bonsai/**/*.module.js',
+  'bonsai/**/*.interceptor.js',
   'bonsai/**/*.service.js',
   'bonsai/**/*.factory.js',
   'bonsai/**/*.controller.js',

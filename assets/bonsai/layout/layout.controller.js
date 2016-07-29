@@ -5,10 +5,15 @@
     .module('bonsai')
     .controller('LayoutCtrl', LayoutCtrl);
 
-    function LayoutCtrl() {
+    LayoutCtrl.$inject = ['authService'];
+
+    function LayoutCtrl(authService) {
       var vm = this;
 
-      vm.message = 'Hello';
-      vm.user = 'Test';
+      function init() {
+        vm.user = authService.getUser();
+      }
+
+      init();
     }
 })();

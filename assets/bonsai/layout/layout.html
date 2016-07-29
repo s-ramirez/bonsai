@@ -1,0 +1,39 @@
+<div layout="row" layout-fill ng-cloak>
+  <!-- Sidenav -->
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2" role="sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+    <md-toolbar class="md-tall md-hue-2" layout-align="end end">
+      <div class="md-toolbar-tools" layout layout-padding>
+        <md-icon>{{data.user.icon}}</md-icon>
+        <div layout="column" layout-padding>
+          <span class="md-body-2">{{layout.user}}</span>
+          <span class="md-caption">{{data.user.email}}</span>
+        </div>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="User Settings">
+          <md-icon>more_vert</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-content role="navigation">
+      <md-list>
+      </md-list>
+    </md-content>
+  </md-sidenav>
+
+  <!-- Dashboard -->
+  <section layout="column" role="main" flex>
+    <md-toolbar role="toolbar" class="md-tall">
+      <span flex></span>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">
+          <md-icon>menu</md-icon>
+        </md-button>
+        <h4 class="md-title">Dashboard</h4>
+      </div>
+    </md-toolbar>
+    <section id="content" role="content" layout="column" layout-padding md-scroll-y>
+      <md-content class="md-whiteframe-z2" ng-cloak>
+      </md-content>
+    </section>
+  </section>
+</div>

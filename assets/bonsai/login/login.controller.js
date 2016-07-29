@@ -5,9 +5,9 @@
     .module('bonsai')
     .controller('LoginCtrl', LoginCtrl);
 
-    LoginCtrl.$inject = ['$mdToast', 'authService', 'toastService'];
+    LoginCtrl.$inject = ['$mdToast', '$location', 'authService', 'toastService'];
 
-    function LoginCtrl($mdToast, authService, toastService) {
+    function LoginCtrl($mdToast, $location, authService, toastService) {
       var vm = this;
       var incorrectToast = toastService.getIncorrectLoginToast();
       var serverErrorToast = toastService.getServerErrorToast();
@@ -18,9 +18,11 @@
           password: vm.password
         };
 
-        authService.login(user).then(function(user){
+        authService.authorize(user).then(function(user){
           if(!user) {
             $mdToast.show(incorrectToast);
+          } else {
+            $location.path('/admin');
           }
         }, function(err){
           $mdToast.show(serverErrorToast);

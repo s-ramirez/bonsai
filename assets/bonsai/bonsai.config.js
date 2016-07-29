@@ -5,7 +5,7 @@
     .module('bonsai')
     .config(configBlock);
 
-  function configBlock($mdThemingProvider) {
+  function configBlock($mdThemingProvider, $locationProvider) {
     //Generated using http://mcg.mbitson.com/#/
     $mdThemingProvider.definePalette('bonsaiPrimary', {
       '50': '#bdcbd6',
@@ -27,7 +27,7 @@
     });
 
     $mdThemingProvider.theme('default')
-    .primaryPalette('bonsaiPrimary')
-    .accentPalette('cyan');
+      .primaryPalette('bonsaiPrimary')
+      .accentPalette('cyan');
   }
 })();
