@@ -1,0 +1,15 @@
+md-toolbar {
+  .toolbar-options {
+    position: absolute;
+    right: 16px;
+    top: 10px;
+
+    md-icon {
+      font-size: 18px;
+    }
+
+    .md-icon-button  {
+      margin: 0;
+    }
+  }
+}
