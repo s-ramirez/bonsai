@@ -30,7 +30,7 @@
       }
 
       function isAuthenticated() {
-        return localStorage.get('token');
+        return storageService.get('token');
       }
 
       return {

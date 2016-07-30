@@ -7,8 +7,8 @@
 
   function routesBlock($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('admin', {
-        url: '/admin',
+      .state('dashboard', {
+        url: '/dashboard',
         templateUrl: '/bonsai/layout/layout.html',
         controller: 'LayoutCtrl',
         controllerAs: 'layout',
@@ -25,6 +25,6 @@
           access: 0 //User access
         }
       });
-      $urlRouterProvider.otherwise('/admin');
+      $urlRouterProvider.otherwise('/dashboard');
   }
 })();

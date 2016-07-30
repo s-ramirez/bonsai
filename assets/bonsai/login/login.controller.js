@@ -22,7 +22,7 @@
           if(!user) {
             $mdToast.show(incorrectToast);
           } else {
-            $location.path('/admin');
+            $location.path('/dashboard');
           }
         }, function(err){
           $mdToast.show(serverErrorToast);

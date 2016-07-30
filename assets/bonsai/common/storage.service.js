@@ -5,17 +5,23 @@
     .module('bonsai')
     .service('storageService', StorageService);
 
-    function StorageService() {
+    StorageService.$inject = ['localStorageService'];
+
+    function StorageService(localStorageService) {
       function get(key) {
-        return localStorage.getItem(key);
+        return localStorageService.get(key);
       }
 
       function set(key, value) {
-        return localStorage.setItem(key, value);
+        return localStorageService.set(key, value);
       }
 
       function remove(key) {
-        return localStorage.removeItem(key);
+        return localStorageService.remove(key);
+      }
+
+      function clearAll() {
+        return localStorageService.clearAll();
       }
 
       return {

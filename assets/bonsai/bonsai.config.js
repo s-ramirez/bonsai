@@ -31,7 +31,5 @@
     $mdThemingProvider.theme('default')
       .primaryPalette('bonsaiPrimary')
       .accentPalette('cyan');
-
-    $locationProvider.html5Mode(true);
   }
 })();

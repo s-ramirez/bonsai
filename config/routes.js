@@ -45,9 +45,9 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  // 'get /login': {
-  //   view: 'bonsai/auth/login'
-  // },
+  'get /admin': {
+    view: 'bonsai/index'
+  },
 
   'post /api/login': 'AuthController.authenticate',
 
