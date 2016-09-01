@@ -1,50 +1,24 @@
-<div layout="row" layout-fill ng-cloak>
-  <!-- Sidenav -->
-  <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" md-disable-backdrop md-whiteframe="4">
-    <md-toolbar class="md-tall md-hue-1" layout-align="end end">
-      <div class="md-toolbar-tools" layout layout-padding>
-        <md-icon>user</md-icon>
-        <div layout="column" layout-padding>
-          <span class="md-body-2">{{layout.user.name}}</span>
-          <span class="md-caption">{{layout.user.email}}</span>
-        </div>
-        <span flex></span>
-        <md-button class="md-icon-button" aria-label="User Settings">
-          <md-icon>more_vert</md-icon>
-        </md-button>
+<div class="sidebar" ng-class="{'active': layout.sidebarActive}">
+  <div class="logo">
+    Bonsai
+  </div>
+  <div class="sidebar-content">
+    <ul class="nav nav-sidebar">
+      <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="#">Export</a></li>
+    </ul>
+  </div>
+</div>
+<div class="main-container" ng-class="{'sidebar-active': layout.sidebarActive}">
+  <nav class="navbar navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand" ng-click="layout.toggleSidebar()"><i class="material-icons icon-menu">menu</i></div>
       </div>
-    </md-toolbar>
-    <md-content role="navigation">
-      <md-list>
-      </md-list>
-    </md-content>
-  </md-sidenav>
-
-  <!-- Dashboard -->
-  <section layout="column" role="main" flex>
-    <md-toolbar role="toolbar">
-      <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" ng-click="layout.toggleSidenav('left')" hide-gt-sm aria-label="Menu">
-          <md-icon>menu</md-icon>
-        </md-button>
-        <h4 class="md-title">Dashboard</h4>
-        <span flex></span>
-        <div class="toolbar-options">
-          <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon>settings</md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="More">
-            <md-icon>notifications</md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="More">
-            <md-icon>more_vert</md-icon>
-          </md-button>
-        </div>
-      </div>
-    </md-toolbar>
-    <section id="content" role="content" layout="column" layout-padding md-scroll-y>
-      <md-content class="md-whiteframe-z2" ng-cloak>
-      </md-content>
-    </section>
-  </section>
+    </div>
+  </nav>
+  <div class="container-fluid" ui-view="container">
+  </div>
 </div>

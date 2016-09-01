@@ -12,19 +12,24 @@
         templateUrl: '/bonsai/layout/layout.html',
         controller: 'LayoutCtrl',
         controllerAs: 'layout',
-        data: {
-          access: 1 // Administrator access
+        abstract: true
+      })
+      .state('dashboard.main', {
+        url: '/main',
+        views: {
+          'container': {
+            templateUrl: '/bonsai/dashboard/dashboard.html',
+            controller: 'DashboardCtrl',
+            controllerAs: 'dashboard'
+          }
         }
       })
       .state('login', {
-        url: '/login',
         templateUrl: '/bonsai/login/login.html',
         controller: 'LoginCtrl',
-        controllerAs: '$ctrl',
-        data: {
-          access: 0 //User access
-        }
+        controllerAs: '$ctrl'
       });
-      $urlRouterProvider.otherwise('/dashboard');
+
+    $urlRouterProvider.otherwise('/dashboard/main');
   }
 })();

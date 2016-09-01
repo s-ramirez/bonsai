@@ -1,4 +1,13 @@
+/*
+ * Global add-ons
+ */
+
 body {
   background-color: $color-bg;
   font-size: 14px;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
 }

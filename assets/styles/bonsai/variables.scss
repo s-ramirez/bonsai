@@ -1,19 +1,30 @@
-// Colors
-$porcelain: #e3e7ea;
+/* Colors */
+$porcelain: #f1f2f7;
 $dusty-gray: #9f9b9c;
 $fiord: #3f5465;
 $mantis: #78bf4c;
 $picton-blue: #38b1e9;
 
-// Min media breakpoints
+/* Min media breakpoints */
 $tablet: 767px;
 $laptop: 991px;
 
-// Instances
-// Layout
+/* Instances */
+/* Layout */
 $color-bg: $porcelain;
 
-// Login
+/* Login */
 $logo-font: 'Roboto Slab', serif;
 $color-login-icons: $dusty-gray;
 $color-login-forgot: $fiord;
+
+/* Navbar */
+$color-navbar-bg: white;
+$color-navbar-border: #eee;
+$color-navbar-font: $fiord;
+$color-logo-bg: $mantis;
+$color-logo-font: white;
+
+/* Sidebar */
+$sidebar-width: 220px;
+$color-sidebar-bg: $fiord;

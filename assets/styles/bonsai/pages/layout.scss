@@ -1,15 +1,77 @@
-md-toolbar {
-  .toolbar-options {
-    position: absolute;
-    right: 16px;
-    top: 10px;
+/*
+ * Sidebar
+ */
 
-    md-icon {
-      font-size: 18px;
-    }
+.navbar {
+  background-color: $color-navbar-bg;
+  color: $color-navbar-font;
+  border-bottom: 1px solid $color-navbar-border;
 
-    .md-icon-button  {
-      margin: 0;
-    }
+  .icon-menu {
+    cursor: pointer;
+  }
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  width: $sidebar-width;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  margin-left: -$sidebar-width;
+  background-color: $color-sidebar-bg;
+  border-right: 1px solid #eee;
+  transition: all 0.5s ease;
+
+  &.active {
+    margin-left: 0;
+  }
+
+  .logo {
+    line-height: 50px;
+    text-align: center;
+    font-size: 2rem;
+    font-family: $logo-font;
+    background: $color-logo-bg;
+    color: $color-logo-font;
+  }
+
+  .sidebar-content {
+    padding: 20px;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+
+  & > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  & > .active > a {
+    color: #fff;
+    background-color: #428bca;
+  }
+}
+
+/*
+ * Main content
+ */
+.main-container {
+  transition: all 0.5s ease;
+
+  &.sidebar-active {
+    padding-left: $sidebar-width;
   }
 }

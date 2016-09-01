@@ -18,7 +18,7 @@
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
   // Libraries
-  'bower_components/angular-material/angular-material.css',
+  'bower_components/bootstrap/dist/css/bootstrap.css',
   // Custom css
   'styles/**/*.css'
 ];
@@ -38,10 +38,9 @@ var jsFilesToInject = [
   'bower_components/angular/angular.js',
   'bower_components/angular-aria/angular-aria.js',
   'bower_components/angular-ui-router/release/angular-ui-router.js',
-  'bower_components/angular-animate/angular-animate.js',
-  'bower_components/angular-messages/angular-messages.js',
-  'bower_components/angular-material/angular-material.js',
   'bower_components/angular-local-storage/dist/angular-local-storage.js',
+  'bower_components/angular-bootstrap/ui-bootstrap.js',
+  'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
 
   // Load the modules first
   'bonsai/**/*.module.js',

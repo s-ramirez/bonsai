@@ -5,19 +5,14 @@
     .module('bonsai')
     .controller('LayoutCtrl', LayoutCtrl);
 
-    LayoutCtrl.$inject = ['$mdSidenav','authService'];
+    LayoutCtrl.$inject = ['authService'];
 
-    function LayoutCtrl($mdSidenav, authService) {
+    function LayoutCtrl(authService) {
       var vm = this;
-
-      function init() {
-        vm.user = JSON.parse(authService.getUser());
-      }
-
-      vm.toggleSidenav = function(navID) {
-        $mdSidenav(navID).toggle();
-      }
-
-      init();
+      vm.sidebarActive = true;
+      
+      vm.toggleSidebar = function() {
+        vm.sidebarActive = !vm.sidebarActive;
+      };
     }
 })();
